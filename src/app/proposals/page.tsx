@@ -11,6 +11,7 @@ const PROPOSALS = [
   { href: "/proposals/hero-name", title: "Колір імені «Bulakh Denis» на оранжевому крузі в Hero" },
   { href: "/proposals/hero-tagline", title: "Шрифт підпису «Guitar is my voice…» в Hero" },
   { href: "/proposals/about-text", title: "Текст секції «Вітаю!» (більш впевнені формулювання)" },
+  { href: "/proposals/stock-text", title: "Текст плашки про стокову музику + додаткові стилі" },
 ] as const;
 
 export default function Proposals() {
