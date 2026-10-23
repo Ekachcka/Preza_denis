@@ -13,6 +13,7 @@ const PROPOSALS = [
   { href: "/proposals/about-text", title: "Текст секції «Вітаю!» (більш впевнені формулювання)" },
   { href: "/proposals/stock-text", title: "Текст плашки про стокову музику + додаткові стилі" },
   { href: "/proposals/why-me-backgrounds", title: "Підкладки-картинки під текст у «Чому я»" },
+  { href: "/proposals/contacts-size", title: "Розміри іконок і тексту в «Контакти»" },
 ] as const;
 
 export default function Proposals() {
