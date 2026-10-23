@@ -11,12 +11,12 @@
 
 - Одностраничное портфолио Дениса Булаха (гитарист, аранжировщик, звукозапись).
 - Стек: Next.js 16.4.3 (App Router, `src/`), React, TypeScript, Tailwind v4, npm.
-- Репозиторий: `git@github.com:Ekachcka/Preza_denis.git`, ветка `main`, SSH-ключ `SSH_KEY` (задан в `core.sshCommand`).
+- Репозиторий: GitHub, ветка `main`. Доступы и ключи хранятся локально в `docs/figma.local.md` (в git не попадает).
 - В `AGENTS.md` есть предупреждение: эта версия Next.js отличается от привычной, перед использованием API нужно сверяться с `node_modules/next/dist/docs/`.
 
 ## Figma
 
-- Файл: https://www.figma.com/design/FIGMA_FILE_KEY/Preza_denis (fileKey `FIGMA_FILE_KEY`).
+- Файл и fileKey: см. `docs/figma.local.md` (локально, не в git).
 - Фрейм страницы: `1:2` «Frame 1», 1600×9809, в макете только десктоп.
 - Для `get_design_context` сначала прочитать MCP-ресурс `skill://figma/figma-design-to-code/SKILL.md`.
 
