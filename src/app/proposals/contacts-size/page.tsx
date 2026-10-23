@@ -12,7 +12,7 @@ const CONTACTS = [
   { text: "@bulakh_denis", icon: "/images/imgVector1.svg", w: 42, h: 42 },
 ] as const;
 
-type Frame = "none" | "outline" | "filled" | "card";
+type Frame = "none" | "outline" | "filled" | "card" | "box" | "boxFilled" | "pill";
 
 type Variant = {
   name: string;
@@ -32,6 +32,10 @@ const VARIANTS: Variant[] = [
   { name: "6. Іконка ×1.6 в оранжевому колі-обведенні (кільце 120)", icon: 1.6, gap: "gap-8", frame: "outline", circle: 120 },
   { name: "7. Іконка ×1.3 у темному колі на сірому тлі (коло 96)", icon: 1.3, gap: "gap-8", frame: "filled", circle: 96 },
   { name: "8. Картки-кнопки: іконка в темному колі 88 на сірій картці", icon: 1.3, gap: "gap-6", frame: "card", circle: 88 },
+  { name: "9. Усе в одній оранжевій рамці-картці: іконка ×1.6 зверху, текст під нею", icon: 1.6, gap: "gap-6", frame: "box" },
+  { name: "10. Усе в одній рамці-картці: іконка в колі-обведенні 96 + текст", icon: 1.3, gap: "gap-6", frame: "box", circle: 96 },
+  { name: "11. Одна картка: сіра заливка + оранжева рамка, іконка ×1.6", icon: 1.6, gap: "gap-6", frame: "boxFilled" },
+  { name: "12. Горизонтальна пігулка: іконка ліворуч, текст праворуч, одна обводка", icon: 1.2, gap: "gap-4", frame: "pill" },
 ];
 
 export default function ContactsSizePreview() {
@@ -52,15 +56,15 @@ export default function ContactsSizePreview() {
                   {CONTACTS.map(({ text, icon, w, h }) => (
                     <li key={text} className="flex justify-center">
                       <div
-                        className={`flex min-w-0 flex-col items-center text-center text-accent ${v.gap} ${v.frame === "card" ? "rounded-card bg-card px-10 py-8" : ""}`}
+                        className={`flex min-w-0 items-center text-accent ${v.gap} ${v.frame === "pill" ? "flex-row rounded-full border-2 border-accent px-6 py-3" : "flex-col text-center"} ${v.frame === "card" ? "rounded-card bg-card px-10 py-8" : ""} ${v.frame === "box" || v.frame === "boxFilled" ? "w-full max-w-[380px] rounded-card border-2 border-accent px-6 py-8" : ""} ${v.frame === "boxFilled" ? "bg-card" : ""}`}
                       >
                         <span
                           style={{ height: slot, width: slot }}
-                          className={`flex shrink-0 items-center justify-center rounded-full ${v.frame === "outline" ? "border-2 border-accent" : ""} ${v.frame === "filled" || v.frame === "card" ? "bg-plate" : ""} ${v.frame === "filled" ? "outline outline-[10px] outline-card" : ""}`}
+                          className={`flex shrink-0 items-center justify-center rounded-full ${v.frame === "outline" || (v.frame === "box" && v.circle) ? "border-2 border-accent" : ""} ${v.frame === "filled" || v.frame === "card" ? "bg-plate" : ""} ${v.frame === "filled" ? "outline outline-[10px] outline-card" : ""}`}
                         >
                           <Image src={icon} alt="" width={Math.round(w * v.icon)} height={Math.round(h * v.icon)} />
                         </span>
-                        <span className="break-all text-xl font-medium leading-normal">{text}</span>
+                        <span className={`${v.frame === "pill" ? "whitespace-nowrap" : "break-all"} text-xl font-medium leading-normal`}>{text}</span>
                       </div>
                     </li>
                   ))}
