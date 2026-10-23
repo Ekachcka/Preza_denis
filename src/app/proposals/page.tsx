@@ -12,6 +12,7 @@ const PROPOSALS = [
   { href: "/proposals/hero-tagline", title: "Шрифт підпису «Guitar is my voice…» в Hero" },
   { href: "/proposals/about-text", title: "Текст секції «Вітаю!» (більш впевнені формулювання)" },
   { href: "/proposals/stock-text", title: "Текст плашки про стокову музику + додаткові стилі" },
+  { href: "/proposals/why-me-backgrounds", title: "Підкладки-картинки під текст у «Чому я»" },
 ] as const;
 
 export default function Proposals() {
