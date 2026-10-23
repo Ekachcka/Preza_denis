@@ -9,7 +9,7 @@ export function Logos() {
   return (
     <Section id="logos" className="pt-20 md:pt-32 xl:pt-[236px]">
       <SectionTitle className="mb-6 xl:mb-[49px]">логотипи</SectionTitle>
-      <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+      <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3">
         {CARDS.map((number) => (
           <li key={number}>
             <NumberedCard number={number} className="h-full" />
