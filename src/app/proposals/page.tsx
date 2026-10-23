@@ -10,6 +10,7 @@ const PROPOSALS = [
   { href: "/arrows", title: "Шрифти для підписів біля стрілок" },
   { href: "/proposals/hero-name", title: "Колір імені «Bulakh Denis» на оранжевому крузі в Hero" },
   { href: "/proposals/hero-tagline", title: "Шрифт підпису «Guitar is my voice…» в Hero" },
+  { href: "/proposals/about-text", title: "Текст секції «Вітаю!» (більш впевнені формулювання)" },
 ] as const;
 
 export default function Proposals() {
