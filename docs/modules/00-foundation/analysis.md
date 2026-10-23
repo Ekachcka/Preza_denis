@@ -1,7 +1,7 @@
 # 00 — Foundation: анализ
 
 Статус: утверждён
-Figma: фрейм `1:2` (1600×9809), fileKey `F4cZYTw30siTJPT8nlzqi8`
+Figma: фрейм `1:2` (1600×9809)
 
 ## Цель
 
