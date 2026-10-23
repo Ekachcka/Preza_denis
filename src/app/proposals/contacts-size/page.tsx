@@ -36,6 +36,14 @@ const VARIANTS: Variant[] = [
   { name: "10. Усе в одній рамці-картці: іконка в колі-обведенні 96 + текст", icon: 1.3, gap: "gap-6", frame: "box", circle: 96 },
   { name: "11. Одна картка: сіра заливка + оранжева рамка, іконка ×1.6", icon: 1.6, gap: "gap-6", frame: "boxFilled" },
   { name: "12. Горизонтальна пігулка: іконка ліворуч, текст праворуч, одна обводка", icon: 1.2, gap: "gap-4", frame: "pill" },
+  { name: "Відстань A1. Іконка як у макеті (×1), відступ 8", icon: 1, gap: "gap-2", frame: "none" },
+  { name: "Відстань A2. Іконка як у макеті (×1), відступ 16", icon: 1, gap: "gap-4", frame: "none" },
+  { name: "Відстань A3. Іконка як у макеті (×1), відступ 24", icon: 1, gap: "gap-6", frame: "none" },
+  { name: "Відстань A4. Іконка як у макеті (×1), відступ 40", icon: 1, gap: "gap-10", frame: "none" },
+  { name: "Відстань B1. Іконка ×2, відступ 8", icon: 2, gap: "gap-2", frame: "none" },
+  { name: "Відстань B2. Іконка ×2, відступ 16", icon: 2, gap: "gap-4", frame: "none" },
+  { name: "Відстань B3. Іконка ×2, відступ 24", icon: 2, gap: "gap-6", frame: "none" },
+  { name: "Відстань B4. Іконка ×2, відступ 48", icon: 2, gap: "gap-12", frame: "none" },
 ];
 
 export default function ContactsSizePreview() {
