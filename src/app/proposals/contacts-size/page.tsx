@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ShowOnSite } from "../ShowOnSite";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -49,7 +50,10 @@ const VARIANTS: Variant[] = [
 export default function ContactsSizePreview() {
   return (
     <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-10 xl:px-[70px]">
-      <h1 className="mb-10 text-2xl font-bold">Варіанти іконок у «Контакти для співпраці» (текст 20px, на одному рівні)</h1>
+      <div className="mb-10 flex flex-wrap items-center gap-4">
+        <h1 className="text-2xl font-bold">Варіанти іконок у «Контакти для співпраці» (текст 20px, на одному рівні)</h1>
+        <ShowOnSite focus="contacts" />
+      </div>
       <div className="flex flex-col gap-12">
         {VARIANTS.map((v) => {
           const slot = v.circle ?? Math.round(42 * v.icon);

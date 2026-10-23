@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ShowOnSite } from "../ShowOnSite";
 import Image from "next/image";
 import {
   Bebas_Neue,
@@ -45,7 +46,10 @@ const VARIANTS = [
 export default function HeroTaglinePreview() {
   return (
     <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-10 xl:px-[70px]">
-      <h1 className="mb-10 text-2xl font-bold">Варіанти шрифту для «Guitar is my voice, music is my story.»</h1>
+      <div className="mb-10 flex flex-wrap items-center gap-4">
+        <h1 className="text-2xl font-bold">Варіанти шрифту для «Guitar is my voice, music is my story.»</h1>
+        <ShowOnSite focus="hero-tagline" />
+      </div>
       <ul className="grid grid-cols-1 gap-10 md:grid-cols-2">
         {VARIANTS.map(({ name, font, size }) => (
           <li key={name}>

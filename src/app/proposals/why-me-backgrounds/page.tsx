@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ShowOnSite } from "../ShowOnSite";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
@@ -103,7 +104,10 @@ const VARIANTS: { name: string; layer: (i: number) => ReactNode }[] = [
 export default function WhyMeBackgroundsPreview() {
   return (
     <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-10 xl:px-[70px]">
-      <h1 className="mb-10 text-2xl font-bold">Варіанти підкладок під текст у «Чому варто співпрацювати зі мною»</h1>
+      <div className="mb-10 flex flex-wrap items-center gap-4">
+        <h1 className="text-2xl font-bold">Варіанти підкладок під текст у «Чому варто співпрацювати зі мною»</h1>
+        <ShowOnSite focus="why-me" />
+      </div>
       <div className="flex flex-col gap-14">
         {VARIANTS.map(({ name, layer }) => (
           <section key={name}>

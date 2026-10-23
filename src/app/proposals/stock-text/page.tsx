@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ShowOnSite } from "../ShowOnSite";
 
 export const metadata: Metadata = {
   title: "Варіанти тексту плашки стокової музики",
@@ -81,7 +82,10 @@ const VARIANTS: Variant[] = [
 export default function StockTextPreview() {
   return (
     <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-10 xl:px-[70px]">
-      <h1 className="mb-2 text-2xl font-bold">Варіанти тексту плашки про стокову музику</h1>
+      <div className="mb-10 flex flex-wrap items-center gap-4">
+        <h1 className="text-2xl font-bold">Варіанти тексту плашки про стокову музику</h1>
+        <ShowOnSite focus="stock-text" />
+      </div>
       <p className="mb-10 max-w-[760px] text-white/70">
         Оранжевим виділені стилі, яких немає в оригіналі: це лише пропозиції для більшого відгуку. Залиште тільки ті, які ви реально пишете.
       </p>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ShowOnSite } from "@/app/proposals/ShowOnSite";
 import {
   Amatic_SC,
   Bad_Script,
@@ -39,7 +40,10 @@ const VARIANTS = [
 export default function ArrowsPreview() {
   return (
     <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-10 xl:px-[70px]">
-      <h1 className="mb-10 text-2xl font-bold">Варіанти шрифтів для підписів біля стрілок</h1>
+      <div className="mb-10 flex flex-wrap items-center gap-4">
+        <h1 className="text-2xl font-bold">Варіанти шрифтів для підписів біля стрілок</h1>
+        <ShowOnSite focus="arrows" />
+      </div>
       <ul className="flex flex-col gap-10">
         {VARIANTS.map(({ name, font, size }) => (
           <li key={name} className="border-b border-card pb-10">

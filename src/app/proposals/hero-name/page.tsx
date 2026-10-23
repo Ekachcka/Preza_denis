@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ShowOnSite } from "../ShowOnSite";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -22,7 +23,10 @@ const VARIANTS = [
 export default function HeroNamePreview() {
   return (
     <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-10 xl:px-[70px]">
-      <h1 className="mb-10 text-2xl font-bold">Варіанти кольору «Bulakh Denis» на оранжевому крузі</h1>
+      <div className="mb-10 flex flex-wrap items-center gap-4">
+        <h1 className="text-2xl font-bold">Варіанти кольору «Bulakh Denis» на оранжевому крузі</h1>
+        <ShowOnSite focus="hero-name" />
+      </div>
       <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
         {VARIANTS.map((v) => {
           const { name, name_, caption, shadow } = v;
