@@ -18,11 +18,11 @@
 }
 
 html {
-  background: var(--color-plate);
+  background: var(--color-surface);
 }
 
 body {
-  background: var(--color-plate);
+  background: var(--color-surface);
   color: #fff;
   font-family: var(--font-sans);
   overflow-x: clip;
