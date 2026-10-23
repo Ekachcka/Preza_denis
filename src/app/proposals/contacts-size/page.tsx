@@ -24,16 +24,17 @@ type Variant = {
 
 const VARIANTS: Variant[] = [
   { name: "Поточний (як у Figma)", title: "text-[30px] text-muted", icon: 1, text: "text-xl", gap: "gap-[65px]" },
-  { name: "1. Трохи більше: іконки ×1.5, текст 24, заголовок 36 світліший", title: "text-[36px] text-white/45", icon: 1.5, text: "text-2xl", gap: "gap-10" },
-  { name: "2. Великі: іконки ×2, текст 28, заголовок 44", title: "text-[44px] text-white/60", icon: 2, text: "text-[28px]", gap: "gap-8" },
-  { name: "3. Картки-кнопки: іконка в колі, текст 24, заголовок 40", title: "text-[40px] text-white/50", icon: 1.3, text: "text-2xl", gap: "gap-6", card: true },
-  { name: "4. Горизонтальні пігулки: іконка зліва, текст 22, заголовок 40", title: "text-[40px] text-white/50", icon: 1.2, text: "text-[22px]", gap: "gap-4", row: true },
+  { name: "1. Іконки ×1.5, текст 20, відступ 40", title: "text-[30px] text-muted", icon: 1.5, text: "text-xl", gap: "gap-10" },
+  { name: "2. Іконки ×2, текст 20, відступ 32", title: "text-[30px] text-muted", icon: 2, text: "text-xl", gap: "gap-8" },
+  { name: "3. Іконки ×2.5, текст 20, відступ 28", title: "text-[30px] text-muted", icon: 2.5, text: "text-xl", gap: "gap-7" },
+  { name: "4. Іконки ×3, текст 20, відступ 24", title: "text-[30px] text-muted", icon: 3, text: "text-xl", gap: "gap-6" },
+  { name: "5. Іконки ×2, текст 20, відступ 65 як у макеті", title: "text-[30px] text-muted", icon: 2, text: "text-xl", gap: "gap-[65px]" },
 ];
 
 export default function ContactsSizePreview() {
   return (
     <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-10 xl:px-[70px]">
-      <h1 className="mb-10 text-2xl font-bold">Варіанти розмірів у «Контакти для співпраці»</h1>
+      <h1 className="mb-10 text-2xl font-bold">Варіанти розміру іконок у «Контакти для співпраці» (текст 20px без змін)</h1>
       <div className="flex flex-col gap-12">
         {VARIANTS.map((v) => (
           <section key={v.name}>
