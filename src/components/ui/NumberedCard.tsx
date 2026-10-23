@@ -19,10 +19,10 @@ export function NumberedCard({
 }: NumberedCardProps) {
   return (
     <div
-      className={`flex min-h-[226px] flex-col rounded-card bg-card pb-4 pr-[19px] pt-4 ${PADDING[variant]} ${className}`}
+      className={`flex min-h-[140px] flex-col md:min-h-[226px] rounded-card bg-card pb-4 pr-[19px] pt-4 ${PADDING[variant]} ${className}`}
       {...rest}
     >
-      <span className="text-[50px] font-bold uppercase leading-normal text-accent">
+      <span className="text-[clamp(32px,6vw,50px)] font-bold uppercase leading-normal text-accent">
         {number}
       </span>
       {children}

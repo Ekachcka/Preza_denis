@@ -15,7 +15,7 @@ export function Hero() {
     <Section id="hero" contained={false}>
       <div className="overflow-hidden">
         <div className="mx-auto w-full max-w-[640px] [container-type:inline-size] lg:max-w-[1600px]">
-          <div className="relative h-[calc(var(--u)*540)] [--u:calc(100cqw/390)] lg:h-[calc(var(--u)*900)] lg:[--u:calc(100cqw/1600)]">
+          <div className="relative h-[calc(var(--u)*620)] [--u:calc(100cqw/390)] lg:h-[calc(var(--u)*900)] lg:[--u:calc(100cqw/1600)]">
             <HeroLines className="[--u:calc(100cqw/700)] lg:[--u:calc(100cqw/1600)]" />
 
             <div aria-hidden="true">
@@ -89,7 +89,7 @@ export function Hero() {
 
             <p
               aria-hidden="true"
-              className={`${abs} left-[calc(var(--u)*61)] top-[calc(var(--u)*274)] whitespace-nowrap font-bold capitalize leading-[normal] text-white text-[length:calc(var(--u)*44)] lg:left-[calc(var(--u)*584)] lg:top-[calc(var(--u)*370)] lg:text-[length:calc(var(--u)*70)]`}
+              className={`${abs} left-[calc(var(--u)*36)] top-[calc(var(--u)*535)] whitespace-nowrap font-bold capitalize leading-[normal] text-white text-[length:calc(var(--u)*52)] lg:left-[calc(var(--u)*584)] lg:top-[calc(var(--u)*370)] lg:text-[length:calc(var(--u)*70)]`}
             >
               PORTFOLIO
             </p>
