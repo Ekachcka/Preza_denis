@@ -6,7 +6,7 @@ export function SectionTitle({
 }: ComponentPropsWithoutRef<"h2">) {
   return (
     <h2
-      className={`text-[clamp(20px,5vw,30px)] font-bold uppercase leading-normal text-white ${className}`}
+      className={`text-[clamp(20px,5vw,30px)] font-bold uppercase leading-[normal] text-white ${className}`}
       {...rest}
     />
   );
