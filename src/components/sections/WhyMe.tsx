@@ -27,7 +27,7 @@ const REASONS = [
 
 export function WhyMe() {
   return (
-    <Section id="why-me" className="pt-20 md:pt-32 xl:pt-[236px]">
+    <Section id="why-me" className="pt-20 md:pt-32 xl:pt-[224px]">
       <SectionTitle className="mb-6 xl:mb-[49px]">
         чому варто співпрацювати зі мною
       </SectionTitle>

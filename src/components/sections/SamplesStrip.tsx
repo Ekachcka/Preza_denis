@@ -6,7 +6,7 @@ export function SamplesStrip() {
     <Section
       id="samples-strip"
       contained={false}
-      className="pt-20 md:pt-32 xl:pt-[236px]"
+      className="pt-20 md:pt-32 xl:pt-[223px]"
     >
       <div className="bg-plate">
         <div className="mx-auto flex w-full max-w-[1600px] flex-col items-start gap-8 px-4 py-10 sm:px-10 md:flex-row md:items-center md:gap-10 xl:min-h-[360px] xl:items-start xl:gap-[79px] xl:px-[70px] xl:pb-[93px] xl:pt-[74px]">

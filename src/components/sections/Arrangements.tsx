@@ -31,7 +31,7 @@ export function Arrangements() {
     <Section
       id="arrangements"
       aria-labelledby="arrangements-title"
-      className="pb-10 pt-16 md:pt-24 xl:pb-0 xl:pt-[238px]"
+      className="pb-10 pt-16 md:pt-24 xl:pb-[167px] xl:pt-[238px]"
     >
       <div className="xl:pl-[5px]">
         <SectionTitle id="arrangements-title" className="leading-[normal]!">
