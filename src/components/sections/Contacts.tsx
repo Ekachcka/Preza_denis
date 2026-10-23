@@ -30,7 +30,7 @@ export function Contacts() {
     <Section
       id="contacts"
       contained={false}
-      className="pt-20 md:pt-32 xl:pt-[236px]"
+      className="pt-20 md:pt-32 xl:pt-[224px]"
     >
       <div className="bg-plate">
         <div className="relative mx-auto w-full max-w-[1600px] px-4 pb-16 pt-10 sm:px-10 xl:px-[70px] xl:pb-[107px] xl:pt-[53px]">

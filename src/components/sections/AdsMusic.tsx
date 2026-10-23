@@ -9,7 +9,7 @@ const DECOR_LINE_OFFSETS = [0, 47, 94, 141, 188, 235, 282, 329];
 export function AdsMusic() {
   return (
     <Section id="ads-music" contained={false}>
-      <div className="relative mx-auto w-full max-w-[1600px] px-4 pb-10 pt-10 sm:px-10 md:pb-16 md:pt-16 xl:px-[70px] xl:pb-[236px] xl:pt-[236px]">
+      <div className="relative mx-auto w-full max-w-[1600px] px-4 pb-10 pt-10 sm:px-10 md:pb-16 md:pt-16 xl:px-[70px] xl:pb-0 xl:pt-[236px]">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-0 top-[calc(2.5rem+60px)] md:top-[calc(4rem+66px)] xl:top-[calc(236px+66px)]"
