@@ -13,8 +13,8 @@ const CARDS = [
 
 export function CoverSongs() {
   return (
-    <Section id="cover-songs" className="pt-20 md:pt-32 xl:pt-[211px]">
-      <SectionTitle className="mb-6 xl:mb-[49px]">трохи каверів</SectionTitle>
+    <Section id="cover-songs" aria-labelledby="cover-songs-title" className="pt-20 md:pt-32 xl:pt-[211px]">
+      <SectionTitle id="cover-songs-title" className="mb-6 xl:mb-[49px]">трохи каверів</SectionTitle>
       <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-6">
         {CARDS.map(({ number, className }) => (
           <li key={number} className={className}>

@@ -15,9 +15,12 @@ describe("StockStrip", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders a decorative photo", () => {
+  it("describes the photo", () => {
     const { container } = render(<StockStrip />);
-    expect(container.querySelector("img")).toHaveAttribute("alt", "");
+    expect(container.querySelector("img")).toHaveAttribute(
+      "alt",
+      "Денис Булах, гітарист і музикант",
+    );
   });
 
   it("exposes the section anchor", () => {

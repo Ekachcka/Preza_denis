@@ -14,7 +14,7 @@ Figma: node `1:23`, `1:78`, `1:27`, `1:28`, `1:26`, `1:9` (фрейм `1:2`, в�
 - Восемь наклонных линий (углы 8.6°–9.5°), выходят за пределы кадра, обрезаются секцией.
 - Три круга диаметром 495px: оранжевый (`#ffa028`, `imgEllipse1`), чёрно-белое концертное фото (`imgImage4`) и портрет с гитарой (`imgImage3`). Концертное и портретное фото в тёмном кольце 514px (`imgEllipse2`).
 - Тексты: `Bulakh Denis` (Regular 30px, в оранжевом круге, перенос по ширине 164px), стрелка (`imgGroup2`), `Guitar is my voice, music is my story.` (SemiBold 15px, ширина 148px), `PORTFOLIO` (Bold 70px, capitalize, белый, поверх фото).
-- Ассеты: `imgVector4…imgVector11.svg` (линии), `imgEllipse1/2.svg`, `imgImage4.png` (1280×854), `imgImage3.png` (JPEG 4096×2822, тяжёлый), `imgGroup2.svg`.
+- Ассеты: `imgVector4…imgVector11.svg` (линии), `imgEllipse1/2.svg`, `imgImage4.webp` (1280×854), `imgImage3.webp` (JPEG 4096×2822, тяжёлый), `imgGroup2.svg`.
 
 ## Структура
 

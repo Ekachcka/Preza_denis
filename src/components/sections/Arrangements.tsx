@@ -16,13 +16,13 @@ export const ARRANGEMENTS: Arrangement[] = [
     number: "01",
     title: "ГОЛОС СВІЙ",
     artist: "NOVA",
-    image: "/images/imgImage12.png",
+    image: "/images/imgImage12.webp",
   },
   {
     number: "02",
     title: "Неосяжний",
     artist: "Денис Булах",
-    image: "/images/imgImage13.png",
+    image: "/images/imgImage13.webp",
   },
 ];
 

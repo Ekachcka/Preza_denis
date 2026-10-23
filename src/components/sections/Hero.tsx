@@ -58,13 +58,13 @@ export function Hero() {
               className={`${abs} left-[calc(var(--u)*180)] top-[calc(var(--u)*190)] size-[calc(var(--u)*190)] overflow-hidden rounded-full lg:left-[calc(var(--u)*533)] lg:top-[calc(var(--u)*158)] lg:size-[calc(var(--u)*495)]`}
             >
               <Image
-                src="/images/imgImage4.png"
-                alt=""
+                src="/images/imgImage4.webp"
+                alt="Денис Булах з електрогітарою на сцені"
                 width={1280}
                 height={854}
                 preload
                 sizes="(min-width: 1600px) 721px, (min-width: 1024px) 45vw, 90vw"
-                className="pointer-events-none absolute left-[-15.77%] top-[-0.04%] h-[100.08%] w-[145.83%] max-w-none"
+                className="pointer-events-none absolute left-[-15.77%] top-[-0.04%] h-[100.08%] w-[145.83%] max-w-none object-cover"
               />
             </div>
 
@@ -78,8 +78,8 @@ export function Hero() {
               className={`${abs} left-[calc(var(--u)*50)] top-[calc(var(--u)*330)] size-[calc(var(--u)*190)] overflow-hidden rounded-full lg:left-[calc(var(--u)*863)] lg:top-[calc(var(--u)*161)] lg:size-[calc(var(--u)*495)]`}
             >
               <Image
-                src="/images/imgImage3.png"
-                alt=""
+                src="/images/imgImage3.webp"
+                alt="Денис Булах з акустичною гітарою"
                 fill
                 preload
                 sizes="(min-width: 1600px) 495px, (min-width: 1024px) 31vw, 50vw"

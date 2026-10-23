@@ -9,7 +9,7 @@ export const COVERS: Cover[] = [
   {
     title: "Я знаю",
     artist: "TAYA",
-    image: "/images/imgImage1.png",
+    image: "/images/imgImage1.webp",
     imageWidth: 1280,
     imageHeight: 720,
     crop: { width: 194.59, height: 110.38, left: -46.57, top: -2.36 },
@@ -17,15 +17,15 @@ export const COVERS: Cover[] = [
   {
     title: "Чому",
     artist: "TAYA",
-    image: "/images/imgImage2.png",
+    image: "/images/imgImage2.webp",
     imageWidth: 1280,
     imageHeight: 720,
     crop: { width: 175.77, height: 100, left: -37.88, top: 0 },
   },
-  { title: "Шукай", artist: "DOROTIUK", image: "/images/imgImage5.png" },
-  { title: "Як добре", artist: "Kreshtofova", image: "/images/imgImage6.png" },
-  { title: "Дуда", artist: "Thesaurum", image: "/images/imgImage7.png" },
-  { title: "З Днем Народ..", artist: "ZHANNET", image: "/images/imgImage8.png" },
+  { title: "Шукай", artist: "DOROTIUK", image: "/images/imgImage5.webp" },
+  { title: "Як добре", artist: "Kreshtofova", image: "/images/imgImage6.webp" },
+  { title: "Дуда", artist: "Thesaurum", image: "/images/imgImage7.webp" },
+  { title: "З Днем Народ..", artist: "ZHANNET", image: "/images/imgImage8.webp" },
 ];
 
 export function Covers() {

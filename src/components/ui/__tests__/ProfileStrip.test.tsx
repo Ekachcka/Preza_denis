@@ -5,7 +5,7 @@ import { ProfileStrip } from "../ProfileStrip";
 describe("ProfileStrip", () => {
   it("renders children and a photo with the given alt", () => {
     render(
-      <ProfileStrip photoSrc="/images/imgImage10.png" photoAlt="Фото">
+      <ProfileStrip photoSrc="/images/imgImage10.webp" photoAlt="Фото">
         <p>Текст</p>
       </ProfileStrip>,
     );
@@ -16,7 +16,7 @@ describe("ProfileStrip", () => {
   it("renders the optional action slot", () => {
     render(
       <ProfileStrip
-        photoSrc="/images/imgImage10.png"
+        photoSrc="/images/imgImage10.webp"
         action={<button type="button">Слухати</button>}
       >
         <p>Текст</p>
@@ -27,7 +27,7 @@ describe("ProfileStrip", () => {
 
   it("renders without an action", () => {
     render(
-      <ProfileStrip photoSrc="/images/imgImage10.png">
+      <ProfileStrip photoSrc="/images/imgImage10.webp">
         <p>Текст</p>
       </ProfileStrip>,
     );

@@ -12,8 +12,8 @@ export function SamplesStrip() {
         <div className="mx-auto flex w-full max-w-[1600px] flex-col items-start gap-8 px-4 py-10 sm:px-10 md:flex-row md:items-center md:gap-10 xl:min-h-[360px] xl:items-start xl:gap-[79px] xl:px-[70px] xl:pb-[93px] xl:pt-[74px]">
           <div className="relative size-[193px] shrink-0">
             <Image
-              src="/images/imgImage11.png"
-              alt=""
+              src="/images/imgImage11.webp"
+              alt="Денис Булах, гітарист і музикант"
               width={199}
               height={199}
               className="absolute -left-[3px] -top-[3px] max-w-none"

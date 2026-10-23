@@ -38,9 +38,12 @@ describe("Album", () => {
     buttons.forEach((button) => expect(button).toHaveAttribute("type", "button"));
   });
 
-  it("marks the cover as decorative", () => {
+  it("describes the album cover", () => {
     const { container } = render(<Album />);
-    expect(container.querySelector("img")).toHaveAttribute("alt", "");
+    expect(container.querySelector("img")).toHaveAttribute(
+      "alt",
+      "Обкладинка альбому «Any price» — Kostiantyn Kukushkin",
+    );
   });
 
   it("exposes the section anchor", () => {

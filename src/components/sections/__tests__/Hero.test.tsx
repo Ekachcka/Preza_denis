@@ -34,11 +34,15 @@ describe("Hero", () => {
     }
   });
 
-  it("renders all images as decorative with empty alt", () => {
+  it("describes the two photos and keeps the rest decorative", () => {
     const { container } = render(<Hero />);
-    const images = container.querySelectorAll("img");
+    const images = Array.from(container.querySelectorAll("img"));
     expect(images.length).toBeGreaterThan(HERO_LINES.length);
-    images.forEach((img) => expect(img).toHaveAttribute("alt", ""));
+    const described = images.map((img) => img.getAttribute("alt")).filter(Boolean);
+    expect(described.sort()).toEqual([
+      "Денис Булах з акустичною гітарою",
+      "Денис Булах з електрогітарою на сцені",
+    ]);
   });
 
   it("renders one image per decor line", () => {

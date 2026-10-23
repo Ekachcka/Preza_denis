@@ -7,8 +7,8 @@ const CARDS = ["01", "02", "03"] as const;
 
 export function Logos() {
   return (
-    <Section id="logos" className="pt-20 md:pt-32 xl:pt-[236px]">
-      <SectionTitle className="mb-6 xl:mb-[49px]">логотипи</SectionTitle>
+    <Section id="logos" aria-labelledby="logos-title" className="pt-20 md:pt-32 xl:pt-[236px]">
+      <SectionTitle id="logos-title" className="mb-6 xl:mb-[49px]">логотипи</SectionTitle>
       <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3">
         {CARDS.map((number) => (
           <li key={number}>

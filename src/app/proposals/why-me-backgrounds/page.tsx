@@ -48,7 +48,7 @@ const ICONS: ReactNode[] = [
   </svg>,
 ];
 
-const PHOTOS = ["/images/imgImage3.png", "/images/imgImage.png", "/images/imgImage4.png", "/images/imgImage10.png"] as const;
+const PHOTOS = ["/images/imgImage3.webp", "/images/imgImage.webp", "/images/imgImage4.webp", "/images/imgImage10.webp"] as const;
 
 function Waves({ seed }: { seed: number }) {
   const bars = Array.from({ length: 28 }, (_, i) => {

@@ -48,12 +48,12 @@ function TallTrack({ number, title }: Track) {
 
 export function Album() {
   return (
-    <Section id="album" className="py-10 md:py-16 xl:pb-[236px] xl:pt-0">
+    <Section id="album" aria-labelledby="album-title" className="py-10 md:py-16 xl:pb-[236px] xl:pt-0">
       <div className="flex flex-col gap-8 rounded-[27px] bg-card-cover p-6 xl:min-h-[366px] md:flex-row md:items-start md:gap-12 md:px-8 md:py-[38px] xl:gap-[65px] xl:pl-[41px] xl:pr-[49px]">
         <div className="relative aspect-[280/281] w-[200px] shrink-0 rounded-card border-3 border-accent xl:w-[280px]">
           <Image
-            src="/images/imgImage9.png"
-            alt=""
+            src="/images/imgImage9.webp"
+            alt="Обкладинка альбому «Any price» — Kostiantyn Kukushkin"
             fill
             sizes="(min-width: 1280px) 280px, 200px"
             className="rounded-card object-cover"
@@ -61,7 +61,7 @@ export function Album() {
           <span className="absolute bottom-[3px] left-1 h-[14px] w-[15px] rounded-card bg-white" />
         </div>
         <div className="flex min-w-0 flex-1 flex-col">
-          <h2 className="max-w-[374px] break-words text-[clamp(28px,3.125vw,50px)] font-medium uppercase leading-[normal] text-accent">
+          <h2 id="album-title" className="max-w-[374px] break-words text-[clamp(28px,3.125vw,50px)] font-medium uppercase leading-[normal] text-accent">
             Kostiantyn Kukushkin Accordion
           </h2>
           <hr className="mt-6 h-0 w-full border-0 border-t-2 border-accent xl:mt-[28px]" />

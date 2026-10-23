@@ -8,7 +8,7 @@ const DECOR_LINE_OFFSETS = [0, 47, 94, 141, 188, 235, 282, 329];
 
 export function AdsMusic() {
   return (
-    <Section id="ads-music" contained={false}>
+    <Section id="ads-music" aria-labelledby="ads-music-title" contained={false}>
       <div className="relative mx-auto w-full max-w-[1600px] px-4 pb-10 pt-10 sm:px-10 md:pb-16 md:pt-16 xl:px-[70px] xl:pb-0 xl:pt-[236px]">
         <div
           aria-hidden="true"
@@ -29,7 +29,7 @@ export function AdsMusic() {
           </div>
         </div>
         <div className="relative">
-          <SectionTitle className="max-w-[440px] leading-[normal]!">
+          <SectionTitle id="ads-music-title" className="max-w-[440px] leading-[normal]!">
             МУЗИКА ДЛЯ РЕКЛАМИ, БЛОГІВ І МЕДІА ПРОЕКТІВ
           </SectionTitle>
           <ol className="mt-8 flex flex-wrap justify-center gap-x-(--gap) gap-y-4 [--gap:16px] md:mt-12 md:gap-y-6 md:[--gap:24px] xl:mt-[72px] xl:gap-y-[23px] xl:[--gap:33px]">

@@ -45,11 +45,13 @@ describe("About", () => {
     expect(denis).toHaveAttribute("aria-hidden", "true");
   });
 
-  it("renders all images as decorative with empty alt", () => {
+  it("describes the portrait and keeps the rest decorative", () => {
     const { container } = render(<About />);
-    const images = container.querySelectorAll("img");
+    const images = Array.from(container.querySelectorAll("img"));
     expect(images).toHaveLength(4);
-    images.forEach((img) => expect(img).toHaveAttribute("alt", ""));
+    const described = images.filter((img) => img.getAttribute("alt") !== "");
+    expect(described).toHaveLength(1);
+    expect(described[0]).toHaveAttribute("alt", "Денис Булах, гітарист і музикант");
   });
 
   it("does not reference external asset urls", () => {

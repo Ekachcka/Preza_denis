@@ -20,10 +20,11 @@ describe("SamplesStrip", () => {
     expect(button).toHaveAttribute("type", "button");
   });
 
-  it("renders images as decorative", () => {
+  it("describes the photo and keeps the triangle decorative", () => {
     const { container } = render(<SamplesStrip />);
-    const images = container.querySelectorAll("img");
+    const images = Array.from(container.querySelectorAll("img"));
     expect(images.length).toBeGreaterThan(0);
-    images.forEach((img) => expect(img).toHaveAttribute("alt", ""));
+    expect(images[0]).toHaveAttribute("alt", "Денис Булах, гітарист і музикант");
+    images.slice(1).forEach((img) => expect(img).toHaveAttribute("alt", ""));
   });
 });

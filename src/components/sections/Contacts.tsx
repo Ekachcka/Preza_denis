@@ -29,15 +29,17 @@ export function Contacts() {
   return (
     <Section
       id="contacts"
+      aria-labelledby="contacts-title"
       contained={false}
       className="pt-20 md:pt-32 xl:pt-[224px]"
     >
       <div className="bg-plate">
         <div className="relative mx-auto w-full max-w-[1600px] px-4 pb-16 pt-10 sm:px-10 xl:px-[70px] xl:pb-[107px] xl:pt-[53px]">
-          <h2 className="text-center text-[clamp(20px,5vw,30px)] font-bold uppercase leading-normal text-muted">
+          <h2 id="contacts-title" className="text-center text-[clamp(20px,5vw,30px)] font-bold uppercase leading-normal text-muted">
             контакти Для співпраці
           </h2>
-          <ul className="mx-auto mt-10 grid w-full max-w-[1380px] grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-4 xl:mt-[84px]">
+          <address className="not-italic">
+            <ul className="mx-auto mt-10 grid w-full max-w-[1380px] grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-4 xl:mt-[84px]">
             {CONTACTS.map(({ href, text, icon, width, height }) => (
               <li key={href} className="flex justify-center">
                 <a
@@ -52,6 +54,7 @@ export function Contacts() {
               </li>
             ))}
           </ul>
+          </address>
           <div
             aria-hidden="true"
             className="pointer-events-none absolute left-[87.4%] top-[160px] hidden h-[150.7px] w-[134px] items-center justify-center xl:flex"

@@ -6,7 +6,7 @@ const faintOutline =
 
 export function About() {
   return (
-    <Section id="about" contained={false}>
+    <Section id="about" aria-labelledby="about-title" contained={false}>
       <div className="overflow-hidden">
         <div className="mx-auto w-full max-w-[1600px] [container-type:inline-size]">
           <div className="relative flex flex-col gap-8 px-4 py-10 [--u:calc(100cqw/1600)] sm:px-10 lg:block lg:h-[calc(var(--u)*946)] lg:p-0">
@@ -25,7 +25,6 @@ export function About() {
             </p>
 
             <div
-              aria-hidden="true"
               className="relative mx-auto aspect-[615/606] w-full max-w-[420px] lg:absolute lg:left-[calc(var(--u)*70)] lg:top-[calc(var(--u)*146)] lg:mx-0 lg:w-[calc(var(--u)*615)] lg:max-w-none"
             >
               <div className="absolute left-0 top-0 h-[84.98%] w-[83.74%]">
@@ -36,8 +35,8 @@ export function About() {
               </div>
               <div className="absolute left-[13.17%] top-[12.05%] h-[86.63%] w-[85.37%]">
                 <Image
-                  src="/images/imgImage.png"
-                  alt=""
+                  src="/images/imgImage.webp"
+                  alt="Денис Булах, гітарист і музикант"
                   fill
                   sizes="(min-width: 1600px) 525px, (min-width: 1024px) 33vw, 420px"
                 />
@@ -45,7 +44,7 @@ export function About() {
             </div>
 
             <div className="relative mt-16 flex flex-col lg:absolute lg:left-[calc(var(--u)*793)] lg:top-[calc(var(--u)*293)] lg:mt-0 lg:w-[calc(var(--u)*518)]">
-              <h2 className="text-[30px] font-bold leading-[normal] text-white lg:text-[length:max(20px,calc(var(--u)*30))]">
+              <h2 id="about-title" className="text-[30px] font-bold leading-[normal] text-white lg:text-[length:max(20px,calc(var(--u)*30))]">
                 Вітаю!
               </h2>
               <p className="mt-3 text-[20px] font-medium leading-[normal] text-white lg:text-[length:max(14px,calc(var(--u)*20))]">
