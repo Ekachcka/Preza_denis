@@ -1,0 +1,87 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Варіанти розмірів контактів",
+  robots: { index: false },
+};
+
+const CONTACTS = [
+  { text: "+38 096 731 39 92", icon: "/images/imgVector.svg", w: 38, h: 38 },
+  { text: "bulakhdenis2002@gmail.com", icon: "/images/imgVector2.svg", w: 42, h: 34 },
+  { text: "@bulakh_denis", icon: "/images/imgVector1.svg", w: 42, h: 42 },
+] as const;
+
+type Frame = "none" | "outline" | "filled" | "card" | "box" | "boxFilled" | "pill";
+
+type Variant = {
+  name: string;
+  icon: number;
+  gap: string;
+  frame: Frame;
+  circle?: number;
+};
+
+const VARIANTS: Variant[] = [
+  { name: "Поточний (як у Figma, але текст на одному рівні)", icon: 1, gap: "gap-[65px]", frame: "none" },
+  { name: "1. Іконки ×1.5, відступ 40", icon: 1.5, gap: "gap-10", frame: "none" },
+  { name: "2. Іконки ×2, відступ 32", icon: 2, gap: "gap-8", frame: "none" },
+  { name: "3. Іконки ×2.5, відступ 28", icon: 2.5, gap: "gap-7", frame: "none" },
+  { name: "4. Іконки ×3, відступ 24", icon: 3, gap: "gap-6", frame: "none" },
+  { name: "5. Іконка ×1.3 в оранжевому колі-обведенні (кільце 96)", icon: 1.3, gap: "gap-8", frame: "outline", circle: 96 },
+  { name: "6. Іконка ×1.6 в оранжевому колі-обведенні (кільце 120)", icon: 1.6, gap: "gap-8", frame: "outline", circle: 120 },
+  { name: "7. Іконка ×1.3 у темному колі на сірому тлі (коло 96)", icon: 1.3, gap: "gap-8", frame: "filled", circle: 96 },
+  { name: "8. Картки-кнопки: іконка в темному колі 88 на сірій картці", icon: 1.3, gap: "gap-6", frame: "card", circle: 88 },
+  { name: "9. Усе в одній оранжевій рамці-картці: іконка ×1.6 зверху, текст під нею", icon: 1.6, gap: "gap-6", frame: "box" },
+  { name: "10. Усе в одній рамці-картці: іконка в колі-обведенні 96 + текст", icon: 1.3, gap: "gap-6", frame: "box", circle: 96 },
+  { name: "11. Одна картка: сіра заливка + оранжева рамка, іконка ×1.6", icon: 1.6, gap: "gap-6", frame: "boxFilled" },
+  { name: "12. Горизонтальна пігулка: іконка ліворуч, текст праворуч, одна обводка", icon: 1.2, gap: "gap-4", frame: "pill" },
+  { name: "Відстань A1. Іконка як у макеті (×1), відступ 8", icon: 1, gap: "gap-2", frame: "none" },
+  { name: "Відстань A2. Іконка як у макеті (×1), відступ 16", icon: 1, gap: "gap-4", frame: "none" },
+  { name: "Відстань A3. Іконка як у макеті (×1), відступ 24", icon: 1, gap: "gap-6", frame: "none" },
+  { name: "Відстань A4. Іконка як у макеті (×1), відступ 40", icon: 1, gap: "gap-10", frame: "none" },
+  { name: "Відстань B1. Іконка ×2, відступ 8", icon: 2, gap: "gap-2", frame: "none" },
+  { name: "Відстань B2. Іконка ×2, відступ 16", icon: 2, gap: "gap-4", frame: "none" },
+  { name: "Відстань B3. Іконка ×2, відступ 24", icon: 2, gap: "gap-6", frame: "none" },
+  { name: "Відстань B4. Іконка ×2, відступ 48", icon: 2, gap: "gap-12", frame: "none" },
+];
+
+export default function ContactsSizePreview() {
+  return (
+    <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-10 xl:px-[70px]">
+      <h1 className="mb-10 text-2xl font-bold">Варіанти іконок у «Контакти для співпраці» (текст 20px, на одному рівні)</h1>
+      <div className="flex flex-col gap-12">
+        {VARIANTS.map((v) => {
+          const slot = v.circle ?? Math.round(42 * v.icon);
+          return (
+            <section key={v.name}>
+              <p className="mb-4 text-sm text-white/60">{v.name}</p>
+              <div className="rounded-card bg-plate px-6 py-12">
+                <h2 className="text-center text-[30px] font-bold uppercase leading-normal text-muted">
+                  контакти Для співпраці
+                </h2>
+                <ul className="mx-auto mt-14 grid max-w-[1380px] grid-cols-1 items-start gap-10 sm:grid-cols-3 sm:gap-4">
+                  {CONTACTS.map(({ text, icon, w, h }) => (
+                    <li key={text} className="flex justify-center">
+                      <div
+                        className={`flex min-w-0 items-center text-accent ${v.gap} ${v.frame === "pill" ? "flex-row rounded-full border-2 border-accent px-6 py-3" : "flex-col text-center"} ${v.frame === "card" ? "rounded-card bg-card px-10 py-8" : ""} ${v.frame === "box" || v.frame === "boxFilled" ? "w-full max-w-[380px] rounded-card border-2 border-accent px-6 py-8" : ""} ${v.frame === "boxFilled" ? "bg-card" : ""}`}
+                      >
+                        <span
+                          style={{ height: slot, width: slot }}
+                          className={`flex shrink-0 items-center justify-center rounded-full ${v.frame === "outline" || (v.frame === "box" && v.circle) ? "border-2 border-accent" : ""} ${v.frame === "filled" || v.frame === "card" ? "bg-plate" : ""} ${v.frame === "filled" ? "outline outline-[10px] outline-card" : ""}`}
+                        >
+                          <Image src={icon} alt="" width={Math.round(w * v.icon)} height={Math.round(h * v.icon)} />
+                        </span>
+                        <span className={`${v.frame === "pill" ? "whitespace-nowrap" : "break-all"} text-xl font-medium leading-normal`}>{text}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    </main>
+  );
+}
