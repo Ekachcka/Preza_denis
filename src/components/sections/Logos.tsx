@@ -28,7 +28,7 @@ export function Logos() {
           <li key={track.number}>
             <TrackCard
               {...track}
-              image="/images/logoPiano.svg"
+              image="/images/logoPianoClear.svg"
               imageClassName="object-contain"
             />
           </li>
