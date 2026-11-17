@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TrackPlayer } from "./TrackPlayer";
+import { BlockPlayer, PlayableBlock } from "./TrackPlayer";
 
 export type Track = {
   number: string;
@@ -22,7 +22,8 @@ export function TrackCard({
   className = "",
 }: TrackCardProps) {
   return (
-    <div
+    <PlayableBlock
+      src={src}
       className={`flex h-full min-h-[140px] flex-col justify-between gap-3 rounded-card bg-card p-3 md:min-h-[226px] md:p-4 xl:pl-[26px] ${className}`}
     >
       <div className="flex items-start justify-between gap-2">
@@ -47,8 +48,8 @@ export function TrackCard({
             {title}
           </p>
         ) : null}
-        {src ? <TrackPlayer src={src} title={title ?? number} /> : null}
+        {src ? <BlockPlayer title={title ?? number} /> : null}
       </div>
-    </div>
+    </PlayableBlock>
   );
 }

@@ -50,7 +50,9 @@ describe("Section", () => {
 
   it("passes aria attributes through", () => {
     render(<Section aria-label="Про мене" />);
-    expect(screen.getByRole("region", { name: "Про мене" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("region", { name: "Про мене" }),
+    ).toBeInTheDocument();
   });
 
   it("renders without children", () => {

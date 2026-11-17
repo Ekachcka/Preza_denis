@@ -30,8 +30,8 @@ export function SamplesStrip() {
           </div>
           <div className="flex max-w-[660px] flex-col items-start gap-[30px] xl:mt-[2px]">
             <p className="text-[clamp(18px,4.5vw,30px)] font-medium leading-normal text-white">
-              Також я писав семпли і далі продовжую займатись цим. Ось один мій
-              фанковий семплпак
+              Також я писав семпли і далі продовжую займатись цим. Ось один з моїх
+              фанкових семплпаїв
             </p>
             <button
               type="button"

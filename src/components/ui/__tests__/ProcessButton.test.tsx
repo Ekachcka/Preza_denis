@@ -11,6 +11,8 @@ describe("ProcessButton", () => {
 
   it("accepts custom children and className", () => {
     render(<ProcessButton className="extra">Слухати</ProcessButton>);
-    expect(screen.getByRole("button", { name: "Слухати" })).toHaveClass("extra");
+    expect(screen.getByRole("button", { name: "Слухати" })).toHaveClass(
+      "extra",
+    );
   });
 });
