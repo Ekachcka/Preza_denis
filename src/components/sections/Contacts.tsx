@@ -41,7 +41,7 @@ export function Contacts() {
       className="pt-20 md:pt-32 xl:pt-[224px]"
     >
       <div className="bg-plate">
-        <div className="relative mx-auto w-full max-w-[1600px] px-4 pb-16 pt-10 sm:px-10 xl:px-[70px] xl:pb-[107px] 2xl:pb-[190px] xl:pt-[53px]">
+        <div className="relative mx-auto w-full max-w-[1600px] px-4 pb-16 pt-10 sm:px-10 xl:px-[70px] md:pb-[190px] xl:pt-[53px]">
           <h2
             id="contacts-title"
             className="text-center text-[clamp(20px,5vw,30px)] font-bold uppercase leading-normal text-muted"
@@ -50,8 +50,8 @@ export function Contacts() {
           </h2>
           <address className="not-italic">
             <ul className="mx-auto mt-10 flex w-full max-w-[1380px] flex-col items-center gap-6 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 xl:mt-[84px]">
-              {CONTACTS.map(({ href, text, icon, width, height }) => (
-                <li key={href} className="flex justify-center">
+              {CONTACTS.map(({ href, text, icon, width, height }, index) => (
+                <li key={href} className="relative flex justify-center">
                   <a
                     href={href}
                     className="flex min-w-0 max-w-full flex-row items-center gap-4 rounded-full border-2 border-accent px-6 py-3 text-base font-medium leading-normal text-accent transition-opacity hover:opacity-80 sm:text-xl"
@@ -80,33 +80,37 @@ export function Contacts() {
                       {text}
                     </span>
                   </a>
+                  {index === CONTACTS.length - 1 ? (
+                    <>
+                      <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute left-[calc(100%-110px)] top-full mt-1 hidden h-[150.7px] w-[134px] items-center justify-center md:flex"
+                      >
+                        <div className="rotate-[-128.51deg]">
+                          <div className="relative h-[49.362px] w-[153.272px]">
+                            <div className="absolute inset-[-2.02%_-1.41%_-2.03%_-0.35%]">
+                              <Image
+                                src="/images/imgGroup18.svg"
+                                alt=""
+                                fill
+                                className="object-fill"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p
+                        aria-hidden="true"
+                        className="pointer-events-none absolute left-[calc(100%-72px)] top-full mt-[130px] hidden font-[family-name:var(--font-amatic)] text-[length:clamp(26px,2.25vw,36px)] font-bold leading-[1.1] text-accent md:block"
+                      >
+                        Тицяй
+                      </p>
+                    </>
+                  ) : null}
                 </li>
               ))}
             </ul>
           </address>
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute left-[84%] top-[235px] hidden h-[150.7px] w-[134px] items-center justify-center 2xl:flex"
-          >
-            <div className="rotate-[-128.51deg]">
-              <div className="relative h-[49.362px] w-[153.272px]">
-                <div className="absolute inset-[-2.02%_-1.41%_-2.03%_-0.35%]">
-                  <Image
-                    src="/images/imgGroup18.svg"
-                    alt=""
-                    fill
-                    className="object-fill"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <p
-            aria-hidden="true"
-            className="pointer-events-none absolute left-[88%] top-[375px] hidden font-[family-name:var(--font-amatic)] font-bold text-[length:clamp(26px,2.25vw,36px)] leading-[1.1] text-accent"
-          >
-            Тицяй
-          </p>
         </div>
       </div>
     </Section>
