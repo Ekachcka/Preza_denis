@@ -21,11 +21,18 @@ describe("Arrangements", () => {
     }
   });
 
-  it("renders a stub process button per card", () => {
+  it("links the process button to the drive file per card", () => {
     render(<Arrangements />);
-    const buttons = screen.getAllByRole("button", { name: "Процес роботи" });
-    expect(buttons).toHaveLength(2);
-    buttons.forEach((b) => expect(b).toHaveAttribute("type", "button"));
+    const links = screen.getAllByRole("link", { name: "Процес роботи" });
+    expect(links).toHaveLength(2);
+    links.forEach((a) =>
+      expect(a.getAttribute("href")).toMatch(/^https:\/\/drive\.google\.com\//),
+    );
+  });
+
+  it("renders a player per card", () => {
+    render(<Arrangements />);
+    expect(screen.getAllByRole("button", { name: /^Слухати:/ })).toHaveLength(2);
   });
 
   it("renders the caption with a decorative arrow", () => {

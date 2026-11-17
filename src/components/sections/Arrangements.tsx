@@ -1,14 +1,17 @@
 import Image from "next/image";
-import { ProcessButton } from "@/components/ui/ProcessButton";
+import { ProcessLink } from "@/components/ui/ProcessButton";
 import { ScribbleArrow } from "@/components/ui/ScribbleArrow";
 import { Section } from "@/components/ui/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { TrackPlayer } from "@/components/ui/TrackPlayer";
 
 type Arrangement = {
   number: string;
   title: string;
   artist: string;
   image: string;
+  src: string;
+  processUrl: string;
 };
 
 export const ARRANGEMENTS: Arrangement[] = [
@@ -17,12 +20,18 @@ export const ARRANGEMENTS: Arrangement[] = [
     title: "ГОЛОС СВІЙ",
     artist: "NOVA",
     image: "/images/imgImage12.webp",
+    src: "/audio/arrangements/golos-svij.mp3",
+    processUrl:
+      "https://drive.google.com/file/d/1xuZyMDe40MTm3GX9wxVwruVE6Bh-fa8T/view?usp=sharing",
   },
   {
     number: "02",
     title: "Неосяжний",
     artist: "Денис Булах",
     image: "/images/imgImage13.webp",
+    src: "/audio/arrangements/neosiazhnyi.mp3",
+    processUrl:
+      "https://drive.google.com/file/d/1rhpOcP0BjcpPseoEtHEL-znu7MQZKX0g/view?usp=sharing",
   },
 ];
 
@@ -38,7 +47,7 @@ export function Arrangements() {
           аранжування
         </SectionTitle>
         <ul className="mt-8 grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-2 xl:mt-[49px]">
-          {ARRANGEMENTS.map(({ number, title, artist, image }) => (
+          {ARRANGEMENTS.map(({ number, title, artist, image, src, processUrl }) => (
             <li key={number} className="flex flex-col gap-[21px]">
               <article className="flex min-h-[226px] justify-between gap-4 rounded-card bg-card pb-5 pl-5 pr-6 pt-4 uppercase">
                 <div className="flex min-w-0 flex-col justify-between">
@@ -48,6 +57,7 @@ export function Arrangements() {
                   <div className="min-w-0 text-[clamp(14px,1.25vw,20px)] leading-[normal] text-white">
                     <p className="font-bold">{title}</p>
                     <p className="mt-[5px] font-normal">{artist}</p>
+                    <TrackPlayer src={src} title={title} className="mt-3 normal-case" />
                   </div>
                 </div>
                 <div className="relative mt-[9px] aspect-square w-[clamp(96px,22vw,177px)] shrink-0 self-start md:w-[clamp(120px,15vw,177px)]">
@@ -61,7 +71,7 @@ export function Arrangements() {
                 </div>
               </article>
               <div className="w-[222px] max-w-full">
-                <ProcessButton />
+                <ProcessLink href={processUrl} />
               </div>
             </li>
           ))}

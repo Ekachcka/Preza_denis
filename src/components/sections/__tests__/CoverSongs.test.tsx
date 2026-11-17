@@ -18,13 +18,10 @@ describe("CoverSongs", () => {
     render(<CoverSongs />);
     const items = screen.getAllByRole("listitem");
     expect(items).toHaveLength(5);
-    expect(items.map((li) => li.textContent)).toEqual([
-      "01",
-      "02",
-      "03",
-      "04",
-      "05",
-    ]);
+    ["01", "02", "03", "04", "05"].forEach((n, i) =>
+      expect(items[i]).toHaveTextContent(n),
+    );
+    expect(screen.getAllByRole("button", { name: /^Слухати:/ })).toHaveLength(5);
   });
 
   it("renders the scribble arrow label", () => {

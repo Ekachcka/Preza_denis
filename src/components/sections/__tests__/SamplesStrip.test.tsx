@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { SamplesStrip } from "../SamplesStrip";
 
@@ -14,17 +14,17 @@ describe("SamplesStrip", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders a stub listen button", () => {
+  it("toggles playback with the listen button", () => {
     render(<SamplesStrip />);
-    const button = screen.getByRole("button", { name: "Слухати" });
-    expect(button).toHaveAttribute("type", "button");
+    fireEvent.click(screen.getByRole("button", { name: "Слухати" }));
+    const pause = screen.getByRole("button", { name: "Пауза" });
+    fireEvent.click(pause);
+    expect(screen.getByRole("button", { name: "Слухати" })).toBeInTheDocument();
   });
 
-  it("describes the photo and keeps the triangle decorative", () => {
-    const { container } = render(<SamplesStrip />);
-    const images = Array.from(container.querySelectorAll("img"));
-    expect(images.length).toBeGreaterThan(0);
-    expect(images[0]).toHaveAttribute("alt", "Денис Булах, гітарист і музикант");
-    images.slice(1).forEach((img) => expect(img).toHaveAttribute("alt", ""));
+  it("shows the sample pack cover and a progress slider", () => {
+    render(<SamplesStrip />);
+    expect(screen.getByAltText("Funk Guitar Sample Pack")).toBeInTheDocument();
+    expect(screen.getByRole("slider")).toBeInTheDocument();
   });
 });

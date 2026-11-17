@@ -17,6 +17,7 @@ describe("Logos", () => {
     for (const n of ["01", "02", "03"]) {
       expect(screen.getByText(n)).toBeInTheDocument();
     }
+    expect(screen.getAllByRole("button", { name: /^Слухати:/ })).toHaveLength(3);
   });
 
   it("renders the scribble arrow label", () => {

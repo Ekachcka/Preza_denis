@@ -1,9 +1,20 @@
 import Image from "next/image";
 import { ScribbleArrow } from "@/components/ui/ScribbleArrow";
+import { TrackCard, type Track } from "@/components/ui/TrackCard";
 import { Section } from "@/components/ui/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
-const CARD_NUMBERS = ["01", "02", "03", "04", "05", "06", "07", "08", "09"];
+export const ADS_TRACKS: Track[] = [
+  { number: "01", title: "Happy Disco Graduation Funk", src: "/audio/ads/happy-disco-graduation-funk.mp3" },
+  { number: "02", title: "Inspiring Uplifting Emotional Cinematic", src: "/audio/ads/inspiring-uplifting-emotional-cinematic.mp3" },
+  { number: "03", title: "Simple Chill Lofi", src: "/audio/ads/simple-chill-lofi.mp3" },
+  { number: "04", title: "Happy Uplifting Pop Corporate", src: "/audio/ads/happy-uplifting-pop-corporate.mp3" },
+  { number: "05", title: "Upbeat Motivational Technology Corporate", src: "/audio/ads/upbeat-motivational-technology-corporate.mp3" },
+  { number: "06", title: "Uplifting And Inspiring Corporate", src: "/audio/ads/uplifting-and-inspiring-corporate.mp3" },
+  { number: "07", title: "Promotional Funk", src: "/audio/ads/promotional-funk.mp3" },
+  { number: "08", title: "Promotional Happy Funk", src: "/audio/ads/promotional-happy-funk.mp3" },
+  { number: "09" },
+];
 const DECOR_LINE_OFFSETS = [0, 47, 94, 141, 188, 235, 282, 329];
 
 export function AdsMusic() {
@@ -33,12 +44,16 @@ export function AdsMusic() {
             МУЗИКА ДЛЯ РЕКЛАМИ, БЛОГІВ І МЕДІА ПРОЕКТІВ
           </SectionTitle>
           <ol className="mt-8 flex flex-wrap justify-center gap-x-(--gap) gap-y-4 [--gap:16px] md:mt-12 md:gap-y-6 md:[--gap:24px] xl:mt-[72px] xl:gap-y-[23px] xl:[--gap:33px]">
-            {CARD_NUMBERS.map((number) => (
+            {ADS_TRACKS.map((track) => (
               <li
-                key={number}
-                className="min-h-[140px] w-[calc((100%-var(--gap))/2)] rounded-card bg-card pl-4 pt-3 text-[clamp(32px,3.125vw,50px)] font-bold uppercase leading-[normal] text-accent-num md:w-[calc((100%-2*var(--gap))/3)] md:pl-5 xl:min-h-[226px] xl:w-[calc((100%-4*var(--gap))/5)] xl:pl-[26px] xl:pt-4"
+                key={track.number}
+                className="w-[calc((100%-var(--gap))/2)] md:w-[calc((100%-2*var(--gap))/3)] xl:w-[calc((100%-4*var(--gap))/5)]"
               >
-                {number}
+                <TrackCard
+                  {...track}
+                  image={track.src ? "/images/audiojungle.jpg" : undefined}
+                  imageClassName="object-contain bg-white"
+                />
               </li>
             ))}
           </ol>

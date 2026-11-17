@@ -23,6 +23,13 @@ const CONTACTS = [
     width: 42,
     height: 42,
   },
+  {
+    href: "https://www.youtube.com/@DENIS_BULAKH",
+    text: "@DENIS_BULAKH",
+    icon: null,
+    width: 42,
+    height: 30,
+  },
 ] as const;
 
 export function Contacts() {
@@ -39,7 +46,7 @@ export function Contacts() {
             контакти Для співпраці
           </h2>
           <address className="not-italic">
-            <ul className="mx-auto mt-10 grid w-full max-w-[1380px] grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-4 xl:mt-[84px]">
+            <ul className="mx-auto mt-10 grid w-full max-w-[1380px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-y-10 xl:grid-cols-4 xl:gap-4 xl:mt-[84px]">
             {CONTACTS.map(({ href, text, icon, width, height }) => (
               <li key={href} className="flex justify-center">
                 <a
@@ -47,7 +54,19 @@ export function Contacts() {
                   className="flex min-w-0 flex-col items-center gap-6 text-center text-base font-medium leading-normal text-accent transition-opacity hover:opacity-80 sm:text-xl xl:gap-[65px]"
                 >
                   <span className="flex h-[42px] items-center">
-                    <Image src={icon} alt="" width={width} height={height} />
+                    {icon ? (
+                      <Image src={icon} alt="" width={width} height={height} />
+                    ) : (
+                      <svg
+                        viewBox="0 0 42 30"
+                        width={width}
+                        height={height}
+                        aria-hidden="true"
+                        className="fill-accent"
+                      >
+                        <path d="M41.1 4.7A5.3 5.3 0 0 0 37.4 1C34.1 0 21 0 21 0S7.9 0 4.6 1A5.3 5.3 0 0 0 .9 4.7C0 8 0 15 0 15s0 7 .9 10.3A5.3 5.3 0 0 0 4.6 29c3.3 1 16.4 1 16.4 1s13.1 0 16.4-1a5.3 5.3 0 0 0 3.7-3.7C42 22 42 15 42 15s0-7-.9-10.3zM16.8 21.4V8.6L27.7 15z" />
+                      </svg>
+                    )}
                   </span>
                   <span className="break-all">{text}</span>
                 </a>

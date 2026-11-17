@@ -31,6 +31,14 @@ describe("Contacts", () => {
     );
   });
 
+  it("links youtube", () => {
+    render(<Contacts />);
+    expect(screen.getByRole("link", { name: "@DENIS_BULAKH" })).toHaveAttribute(
+      "href",
+      "https://www.youtube.com/@DENIS_BULAKH",
+    );
+  });
+
   it("renders icons as decorative images", () => {
     const { container } = render(<Contacts />);
     container
