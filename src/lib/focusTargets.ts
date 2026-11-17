@@ -12,6 +12,11 @@ export const FOCUS_TARGETS = {
   "why-me": { selector: "#why-me ul" },
   contacts: { selector: "#contacts ul" },
   tracks: { selector: "#album ul" },
+  covers: { selector: "#covers ul" },
+  arrangements: { selector: "#arrangements ul" },
+  ads: { selector: "#ads-music ol" },
+  logos: { selector: "#logos ul" },
+  "cover-songs": { selector: "#cover-songs ul" },
   "samples-text": { selector: "#samples-strip p" },
 } as const satisfies Record<string, FocusTarget>;
 
