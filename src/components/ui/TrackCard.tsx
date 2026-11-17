@@ -10,6 +10,7 @@ export type Track = {
 type TrackCardProps = Track & {
   image?: string;
   imageClassName?: string;
+  imageSizeClassName?: string;
   className?: string;
 };
 
@@ -19,6 +20,7 @@ export function TrackCard({
   src,
   image,
   imageClassName = "object-cover",
+  imageSizeClassName = "w-[clamp(56px,30%,96px)]",
   className = "",
 }: TrackCardProps) {
   return (
@@ -31,7 +33,9 @@ export function TrackCard({
           {number}
         </span>
         {image ? (
-          <div className="relative aspect-square w-[clamp(56px,30%,96px)] shrink-0 overflow-hidden rounded-[5px]">
+          <div
+            className={`relative aspect-square ${imageSizeClassName} shrink-0 overflow-hidden rounded-[5px]`}
+          >
             <Image
               src={image}
               alt=""

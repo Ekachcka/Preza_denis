@@ -30,6 +30,7 @@ export function Logos() {
               {...track}
               image="/images/logoPianoSquare.svg"
               imageClassName="object-contain"
+              imageSizeClassName="w-[clamp(40px,16%,60px)]"
             />
           </li>
         ))}
