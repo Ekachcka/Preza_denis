@@ -59,7 +59,7 @@ export function AdsMusic() {
           </ol>
           <div className="mt-10 flex items-start justify-end gap-6 pr-2 xl:mt-[62px] xl:gap-[81px]">
             <ScribbleArrow className="w-[200px] sm:w-[260px] xl:w-[331px]" />
-            <p className="mt-6 w-[82px] text-[clamp(14px,1.25vw,20px)] font-normal leading-[normal] text-accent xl:mt-[50px]">
+            <p className="mt-6 w-[82px] font-[family-name:var(--font-amatic)] font-bold text-[length:clamp(26px,2.25vw,36px)] leading-[1.1] text-accent xl:mt-[50px]">
               Тицяй і слухай
             </p>
           </div>

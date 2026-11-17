@@ -36,3 +36,7 @@
 - `src/components/sections/hero/HeroLines.tsx` — слой линий.
 - `src/components/sections/hero/decorLines.ts` — данные линий.
 - `src/components/sections/__tests__/Hero.test.tsx` — тесты.
+
+## Обновление 2026-11-17
+
+Имя и подпись на оранжевом круге белые с мягкой тёмной тенью, чтобы читались на оранжевом. Шрифт подписи прежний.

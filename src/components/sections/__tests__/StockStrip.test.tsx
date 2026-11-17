@@ -7,11 +7,11 @@ describe("StockStrip", () => {
     render(<StockStrip />);
     expect(
       screen.getByText(
-        "Я писав стокову музику в різних стилях таких як Corporate, Funk, Pop, Disco, Cinematic, Rock, Lo-Fi",
+        "Пишу стокову музику в стилях: Corporate, Funk, Pop, Disco, Cinematic, Rock, Lo-Fi, Upbeat, Ambient, Chillhop, Acoustic, Epic, Motivational, Hip-Hop, Indie, Synthwave, Tropical House, Jazz, Orchestral.",
       ),
     ).toBeInTheDocument();
     expect(
-      screen.getByText("Також трохи писав аудіо логотипи (Logo)"),
+      screen.getByText("А ще — аудіологотипи (Logo)."),
     ).toBeInTheDocument();
   });
 

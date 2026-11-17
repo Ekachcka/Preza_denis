@@ -34,3 +34,7 @@
 - `src/components/sections/Arrangements.tsx` — секция и данные карточек.
 - `src/components/ui/ScribbleArrow.tsx` — рукописная стрелка (копия из ветки 03).
 - `src/components/sections/__tests__/Arrangements.test.tsx` — тесты.
+
+## Обновление 2026-11-17
+
+Подпись «Тицяй і слухай» у стрелки теперь шрифтом Amatic SC 700 (вариант 7 из «Пропозицій»); то же в секциях 07, 08, 10 и «Тицяй» в контактах.

@@ -46,21 +46,26 @@ export function Contacts() {
             контакти Для співпраці
           </h2>
           <address className="not-italic">
-            <ul className="mx-auto mt-10 grid w-full max-w-[1380px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-y-10 xl:grid-cols-4 xl:gap-4 xl:mt-[84px]">
+            <ul className="mx-auto mt-10 flex w-full max-w-[1380px] flex-col items-center gap-6 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 xl:mt-[84px]">
             {CONTACTS.map(({ href, text, icon, width, height }) => (
               <li key={href} className="flex justify-center">
                 <a
                   href={href}
-                  className="flex min-w-0 flex-col items-center gap-6 text-center text-base font-medium leading-normal text-accent transition-opacity hover:opacity-80 sm:text-xl xl:gap-[65px]"
+                  className="flex min-w-0 max-w-full flex-row items-center gap-4 rounded-full border-2 border-accent px-6 py-3 text-base font-medium leading-normal text-accent transition-opacity hover:opacity-80 sm:text-xl"
                 >
-                  <span className="flex h-[42px] items-center">
+                  <span className="flex shrink-0 items-center">
                     {icon ? (
-                      <Image src={icon} alt="" width={width} height={height} />
+                      <Image
+                        src={icon}
+                        alt=""
+                        width={Math.round(width * 1.2)}
+                        height={Math.round(height * 1.2)}
+                      />
                     ) : (
                       <svg
                         viewBox="0 0 42 30"
-                        width={width}
-                        height={height}
+                        width={Math.round(width * 1.2)}
+                        height={Math.round(height * 1.2)}
                         aria-hidden="true"
                         className="fill-accent"
                       >
@@ -68,7 +73,9 @@ export function Contacts() {
                       </svg>
                     )}
                   </span>
-                  <span className="break-all">{text}</span>
+                  <span className="min-w-0 break-all sm:whitespace-nowrap sm:break-normal">
+                    {text}
+                  </span>
                 </a>
               </li>
             ))}
@@ -93,7 +100,7 @@ export function Contacts() {
           </div>
           <p
             aria-hidden="true"
-            className="pointer-events-none absolute left-[90.7%] top-[128px] hidden text-xl font-normal leading-normal text-accent xl:block"
+            className="pointer-events-none absolute left-[90.7%] top-[128px] hidden font-[family-name:var(--font-amatic)] font-bold text-[length:clamp(26px,2.25vw,36px)] leading-[1.1] text-accent xl:block"
           >
             Тицяй
           </p>

@@ -17,15 +17,15 @@ describe("About", () => {
 
   it("renders the texts verbatim", () => {
     render(<About />);
-    expect(screen.getByText("Мене звати Денис Булах!")).toBeInTheDocument();
+    expect(screen.getByText("Мене звати Денис Булах.")).toBeInTheDocument();
     expect(
       screen.getByText(
-        "Мені 23 роки. Я гітарист, музикант! Прагну працювати в сфері аранжування і звукозапису з вами!",
+        "Мені 23 роки, я гітарист і музикант. Працюю в сфері аранжування та звукозапису й готовий робити це для вас.",
       ),
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        "Я маю досвід роботи на студії в онлайн форматі вже 4 роки.  Ось деякі треки на які я прописував гітарні партії і аранжування та докази, що робив їх саме я:",
+        "Уже 4 роки співпрацюю зі студіями в онлайн-форматі. Нижче — треки, в яких гітарні партії та аранжування зробив я. Послухайте самі:",
         { normalizer: (s) => s },
       ),
     ).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe("About", () => {
 
   it("keeps the second paragraph whitespace", () => {
     render(<About />);
-    const p = screen.getByText(/Я маю досвід/, { normalizer: (s) => s });
+    const p = screen.getByText(/Уже 4 роки/, { normalizer: (s) => s });
     expect(p).toHaveClass("whitespace-pre-wrap");
   });
 

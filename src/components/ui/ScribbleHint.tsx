@@ -23,7 +23,7 @@ export function ScribbleHint({
           />
         </div>
       </div>
-      <p className="mt-5 w-[82px] shrink-0 text-base font-normal leading-normal text-accent sm:mt-[50px] sm:text-xl">
+      <p className="mt-5 w-[82px] shrink-0 font-[family-name:var(--font-amatic)] font-bold text-[length:clamp(26px,2.25vw,36px)] leading-[1.1] text-accent sm:mt-[50px]">
         {label}
       </p>
     </div>

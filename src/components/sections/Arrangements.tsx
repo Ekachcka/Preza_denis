@@ -78,7 +78,7 @@ export function Arrangements() {
         </ul>
         <div className="mt-8 flex items-start justify-end xl:mt-[56px]">
           <ScribbleArrow className="mt-[7px] w-[min(330px,calc(100%-82px))] shrink" />
-          <p className="relative -ml-[60px] mr-0.5 w-[82px] shrink-0 text-[clamp(14px,1.25vw,20px)] leading-[normal] text-accent">
+          <p className="relative -ml-[60px] mr-0.5 w-[82px] shrink-0 font-[family-name:var(--font-amatic)] font-bold text-[length:clamp(26px,2.25vw,36px)] leading-[1.1] text-accent">
             Тицяй і слухай
           </p>
         </div>

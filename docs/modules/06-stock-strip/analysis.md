@@ -39,3 +39,7 @@ Figma: фрейм `1:2`, node `2001:12`
 ## Открытые вопросы
 
 Нет: решения по адаптиву, hover/focus и alt приняты пользователем.
+
+## Обновление 2026-11-17: выбор из «Пропозицій»
+
+Вариант 4 «Максимальний відгук»: список стилей расширен (Corporate … Lo-Fi плюс Upbeat, Ambient, Chillhop, Acoustic, Epic, Motivational, Hip-Hop, Indie, Synthwave, Tropical House, Jazz, Orchestral). Новые стили — предложение, владелец оставляет только те, что реально пишет.

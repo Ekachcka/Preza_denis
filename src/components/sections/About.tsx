@@ -48,13 +48,13 @@ export function About() {
                 Вітаю!
               </h2>
               <p className="mt-3 text-[20px] font-medium leading-[normal] text-white lg:text-[length:max(14px,calc(var(--u)*20))]">
-                Мене звати Денис Булах!
+                Мене звати Денис Булах.
               </p>
               <p className="mt-3 text-[20px] font-medium leading-[normal] text-white lg:w-[calc(var(--u)*512)] lg:text-[length:max(14px,calc(var(--u)*20))]">
-                Мені 23 роки. Я гітарист, музикант! Прагну працювати в сфері аранжування і звукозапису з вами!
+                Мені 23 роки, я гітарист і музикант. Працюю в сфері аранжування та звукозапису й готовий робити це для вас.
               </p>
               <p className="mt-5 whitespace-pre-wrap text-[20px] font-medium leading-[normal] text-white lg:text-[length:max(14px,calc(var(--u)*20))]">
-                Я маю досвід роботи на студії в онлайн форматі вже 4 роки.  Ось деякі треки на які я прописував гітарні партії і аранжування та докази, що робив їх саме я:
+                Уже 4 роки співпрацюю зі студіями в онлайн-форматі. Нижче — треки, в яких гітарні партії та аранжування зробив я. Послухайте самі:
               </p>
             </div>
           </div>

@@ -21,3 +21,7 @@ Typecheck, lint, unit проходят; визуально сверено на 1
 - `src/components/sections/StockStrip.tsx`
 - `src/components/ui/ProfileStrip.tsx`
 - `src/components/sections/__tests__/StockStrip.test.tsx`
+
+## Обновление 2026-11-17
+
+Плашка: «Пишу стокову музику в стилях: …19 стилей….» и «А ще — аудіологотипи (Logo).»

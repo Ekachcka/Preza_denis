@@ -27,3 +27,7 @@
 - `src/components/sections/WhyMe.tsx` — секция и данные.
 - `src/components/ui/NumberedCard.tsx` — карточка.
 - `src/components/sections/__tests__/WhyMe.test.tsx` и `src/components/ui/__tests__/NumberedCard.test.tsx` — тесты.
+
+## Обновление 2026-11-17
+
+В каждой из 4 карточек внизу декоративные звуковые волны (оранжевые, 25% прозрачности), текст и номер читаются поверх.

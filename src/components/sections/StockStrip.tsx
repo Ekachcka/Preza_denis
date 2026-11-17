@@ -9,10 +9,9 @@ export function StockStrip() {
         photoAlt="Денис Булах, гітарист і музикант"
       >
         <p>
-          Я писав стокову музику в різних стилях таких як Corporate, Funk, Pop,
-          Disco, Cinematic, Rock, Lo-Fi
+          Пишу стокову музику в стилях: Corporate, Funk, Pop, Disco, Cinematic, Rock, Lo-Fi, Upbeat, Ambient, Chillhop, Acoustic, Epic, Motivational, Hip-Hop, Indie, Synthwave, Tropical House, Jazz, Orchestral.
         </p>
-        <p>Також трохи писав аудіо логотипи (Logo)</p>
+        <p>А ще — аудіологотипи (Logo).</p>
       </ProfileStrip>
     </Section>
   );

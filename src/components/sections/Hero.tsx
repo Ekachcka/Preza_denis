@@ -103,12 +103,12 @@ export function Hero() {
               </div>
             </div>
             <p
-              className={`${abs} left-[calc(var(--u)*50)] top-[calc(var(--u)*228)] w-[calc(var(--u)*100)] font-semibold leading-[normal] text-white text-[length:calc(var(--u)*11)] lg:left-[calc(var(--u)*338)] lg:top-[calc(var(--u)*379)] lg:w-[calc(var(--u)*148)] lg:text-[length:calc(var(--u)*15)]`}
+              className={`${abs} left-[calc(var(--u)*50)] top-[calc(var(--u)*228)] w-[calc(var(--u)*100)] font-semibold leading-[normal] text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.55)] text-[length:calc(var(--u)*11)] lg:left-[calc(var(--u)*338)] lg:top-[calc(var(--u)*379)] lg:w-[calc(var(--u)*148)] lg:text-[length:calc(var(--u)*15)]`}
             >
               Guitar is my voice, music is my story.
             </p>
             <h1
-              className={`${abs} left-[calc(var(--u)*40)] top-[calc(var(--u)*140)] w-[calc(var(--u)*110)] font-normal leading-[normal] text-white text-[length:calc(var(--u)*20)] lg:left-[calc(var(--u)*317)] lg:top-[calc(var(--u)*178)] lg:w-[calc(var(--u)*164)] lg:text-[length:calc(var(--u)*30)]`}
+              className={`${abs} left-[calc(var(--u)*40)] top-[calc(var(--u)*140)] w-[calc(var(--u)*110)] font-normal leading-[normal] text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.55)] text-[length:calc(var(--u)*20)] lg:left-[calc(var(--u)*317)] lg:top-[calc(var(--u)*178)] lg:w-[calc(var(--u)*164)] lg:text-[length:calc(var(--u)*30)]`}
             >
               Bulakh Denis
             </h1>
