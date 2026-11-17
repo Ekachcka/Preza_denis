@@ -16,7 +16,7 @@ export function Logos() {
       <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3">
         {LOGO_TRACKS.map((track) => (
           <li key={track.number}>
-            <TrackCard {...track} />
+            <TrackCard {...track} image="/images/logoPiano.svg" imageClassName="object-contain bg-white" />
           </li>
         ))}
       </ul>

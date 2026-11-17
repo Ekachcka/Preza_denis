@@ -38,3 +38,7 @@ typecheck, lint, unit (77) зелёные. Визуально проверено
 - `src/components/sections/{Arrangements,AdsMusic,Logos,SamplesStrip,CoverSongs,Contacts}.tsx`
 - `src/app/layout.tsx`
 - `public/audio/`, `public/images/{samplePackCover,coverSongPhoto,audiojungle}.jpg`
+
+## Дополнение (2026-11-17): иконка логотипов
+
+Картинка-пианино из переписки не передана файлом, нарисована своя SVG (`public/images/logoPiano.svg`) и стоит на 3 карточках логотипов (в карточке рекламы так же стоит audiojungle). Заменить на оригинал можно подменой файла.
